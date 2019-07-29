@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es5",
+        "target": "es6",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "noEmitHelpers": true,
@@ -14,8 +14,14 @@
         "paths": {
             "~/*": [
                 "app/*"
+            ],
+            "*": [
+                "./node_modules/tns-core-modules/*",
+                "./node_modules/*"
             ]
-        }
+        },
+        "skipLibCheck": true,
+        "preserveSymlinks": true
     },
     "exclude": [
         "node_modules",
