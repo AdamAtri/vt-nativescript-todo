@@ -13,11 +13,10 @@ export class ExampleListView extends GridLayout {
     this.addChild(this.list);
   }
 
-  protected _title:string = 'Example List';
-  public get title():string { return this._title; }
+  public get title():string { return this._header.text || 'Example List'; }
   public set title(v:string) {
-    if (this._title != v) {
-      this._title = v;
+    if (this._header.text != v) {
+      this._header.text = v
     }
   }
 
